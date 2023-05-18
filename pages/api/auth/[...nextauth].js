@@ -3,7 +3,7 @@ import NextAuth, { getServerSession } from 'next-auth'
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
 import GoogleProvider from 'next-auth/providers/google'
 
-const adminEmails = ['dummy5252acc@gmail.com'];
+const adminEmails = ['dummy5252acc@gmail.com','chokhawalajiya3110@gmail.com'];
 
 
 
