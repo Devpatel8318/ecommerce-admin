@@ -5,6 +5,9 @@ import GoogleProvider from 'next-auth/providers/google'
 
 const adminEmails = ['dummy5252acc@gmail.com'];
 
+console.log(process.env.NEXT_PUBLIC_GOOGLE_ID);
+console.log(process.env.NEXT_PUBLIC_GOOGLE_SECRET);
+
 export const authOptions = {
     providers: [
         GoogleProvider({
@@ -15,7 +18,6 @@ export const authOptions = {
     adapter: MongoDBAdapter(clientPromise),
     callbacks:{
         session:({session,token,user})=>{
-            // console.log(session.user);
             if(adminEmails.includes(session?.user?.email)){
                 return session;
             }
