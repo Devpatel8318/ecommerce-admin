@@ -29,7 +29,7 @@ table.basic{
 table.basic thead tr td,
 table.basic thead tr th
 {
-    @apply bg-blue-100 text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-1;
+    @apply bg-blue-100 text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-1 text-center;
 }
 table.basic tr td{
     @apply px-4 py-2 border border-gray-200;
