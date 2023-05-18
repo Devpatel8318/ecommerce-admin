@@ -8,8 +8,8 @@ const adminEmails = ['dummy5252acc@gmail.com'];
 export const authOptions = {
     providers: [
         GoogleProvider({
-            clientId: process.env.NEXT_PUBLIC_GOOGLE_ID,
-            clientSecret: process.env.NEXT_PUBLIC_GOOGLE_SECRET
+            clientId: "277156471647-7jgjicd621dqtuihamprlld8g3hot4oa.apps.googleusercontent.com",
+            clientSecret:"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"
         }),
     ],
     adapter: MongoDBAdapter(clientPromise),
