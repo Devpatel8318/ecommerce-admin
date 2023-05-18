@@ -37,7 +37,7 @@ function OrdersPage() {
                             <td>
                                 {order.line_items.map(l => (
                                     <div key={l.name}>
-                                        {l.price_data.product_data?.name} X {l.quantity} X {l.paid} <br />
+                                        {l.price_data.product_data?.name} X {l.quantity}<br />
                                     </div>
                                 ))}
                             </td>
