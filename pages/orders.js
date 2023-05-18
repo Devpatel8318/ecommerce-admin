@@ -10,7 +10,7 @@ function OrdersPage() {
     useEffect(() => {
         axios.get('api/orders').then((response) => {
             setOrders(response.data);
-            console.log(response.data);
+            // console.log(response.data);
         });
     }, []);
 
@@ -36,9 +36,9 @@ function OrdersPage() {
                                 {order.city} <br /> <div /> {order.postalCode}</td>
                             <td>
                                 {order.line_items.map(l => (
-                                    <>
+                                    <div key={l.name}>
                                         {l.price_data.product_data?.name} X {l.quantity} X {l.paid} <br />
-                                    </>
+                                    </div>
                                 ))}
                             </td>
                         </tr>

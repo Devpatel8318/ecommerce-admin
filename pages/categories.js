@@ -61,7 +61,6 @@ function Categories({ swal }) {
             name,
             values : values.join(','),
         })));
-        // console.log(properties);
     }
 
 
