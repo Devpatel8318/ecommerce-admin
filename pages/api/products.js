@@ -7,7 +7,9 @@ export default async function handler(req, res) {
 
     const {method} = req;
     await mongooseConnect();
-    await isAdminRequest(req, res);
+
+    //ALERT !!!!!! THIS WILL ALLOW ALL TO JOINNN!!!!
+    // await isAdminRequest(req, res);
     // parentCategory || undefined,
     if (method === 'POST') {
         const { title, description, price,images,category,properties } = req.body;
