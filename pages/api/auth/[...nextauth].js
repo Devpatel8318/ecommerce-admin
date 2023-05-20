@@ -25,10 +25,7 @@ export const authOptions = {
                 return session;
             }
             else{
-
-                //ALERT !!!!!! THIS WILL ALLOW ALL TO JOINNN!!!!
-                // return false;
-                return session;
+                return false;
             }
         },
     },secret: process.env.NEXTAUTH_SECRET,

@@ -8,6 +8,7 @@ export default async function handler(req, res) {
         try{
 
             const {admins} = req.body;
+            // console.log(admins);
             await AdminModel.findByIdAndUpdate("6466267fd5714d7098e12352",{
                 admins:admins
             })

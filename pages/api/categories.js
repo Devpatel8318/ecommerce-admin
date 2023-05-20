@@ -7,8 +7,7 @@ export default async function handle(req, res) {
 
     await mongooseConnect();
 
-      //ALERT !!!!!! THIS WILL ALLOW ALL TO JOINNN!!!!
-    // await isAdminRequest(req, res);
+    await isAdminRequest(req, res);
 
     if (method === "POST") {
         const { name, parentCategory, properties } = req.body;
