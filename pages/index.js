@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { useSession } from "next-auth/react"
+import Head from "next/head";
 
 
 
@@ -9,6 +10,9 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>Dev Cart|Admin</title>
+    </Head>
       <div className="text-blue-900 flex justify-between">
         <h1>
           Hello, <b>{session?.user.name}</b>

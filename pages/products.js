@@ -2,6 +2,7 @@ import Layout from '@/components/Layout'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import axios from 'axios';
+import Head from 'next/head';
 
 function Products() {
 
@@ -16,6 +17,9 @@ function Products() {
 
   return (
     <Layout>
+      <Head>
+        <title>Dev Cart|Admin</title>
+      </Head>
       <Link className="py-1 px-2 btn-primary " href={'/products/new'}>
         Add new Products
       </Link>

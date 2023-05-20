@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import axios from 'axios';
+import Head from 'next/head';
 import React, { useEffect, useState } from 'react'
 
 function OrdersPage() {
@@ -16,6 +17,9 @@ function OrdersPage() {
 
     return (
         <Layout>
+            <Head>
+                <title>Dev Cart|Admin</title>
+            </Head>
             <table className="basic">
                 <thead>
                     <tr>
@@ -29,8 +33,8 @@ function OrdersPage() {
                     {orders.length > 0 && orders.map(order => (
                         <tr key={order._id}>
                             <td>{(new Date(order.createdAt)).toLocaleString(undefined, { hour12: true })}</td>
-                            <td className={order.paid ? 'text-green-600':'text-red-600'}>{order.paid?'YES':'NO'}</td>
-                            <td>{order.name} <span> </span> 
+                            <td className={order.paid ? 'text-green-600' : 'text-red-600'}>{order.paid ? 'YES' : 'NO'}</td>
+                            <td>{order.name} <span> </span>
                                 {order.email} <br /> <span> </span>
                                 {order.address} <span></span>
                                 {order.city} <br /> <div /> {order.postalCode}</td>
