@@ -17,9 +17,6 @@ function Products() {
 
   return (
     <Layout>
-      <Head>
-        <title>Dev Cart|Admin</title>
-      </Head>
       <Link className="py-1 px-2 btn-primary " href={'/products/new'}>
         Add new Products
       </Link>
