@@ -1,6 +1,5 @@
 import Layout from '@/components/Layout'
 import axios from 'axios';
-import Head from 'next/head';
 import React, { useEffect, useState } from 'react'
 import { withSwal } from 'react-sweetalert2';
 
@@ -80,9 +79,7 @@ function Admins({ swal }) {
 
     return (
         <Layout>
-            <Head>
-                <title>Dev Cart|Admin</title>
-            </Head>
+
             <h1 className='text-center text-2xl font-bold'>Admins</h1>
 
             <div className='flex justify-center'>

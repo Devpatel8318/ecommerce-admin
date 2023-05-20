@@ -1,6 +1,5 @@
 import Layout from '@/components/Layout'
 import axios from 'axios';
-import Head from 'next/head';
 import React, { useEffect, useState } from 'react'
 import { withSwal } from 'react-sweetalert2';
 
@@ -58,9 +57,9 @@ function Categories({ swal }) {
         setEditedCategory(category);
         setName(category.name);
         setParentCategory(category.parent?._id);
-        setProperties(category.properties.map(({ name, values }) => ({
+        setProperties(category.properties.map(({name,values})=>({
             name,
-            values: values.join(','),
+            values : values.join(','),
         })));
     }
 
@@ -119,9 +118,6 @@ function Categories({ swal }) {
 
     return (
         <Layout>
-            <Head>
-                <title>Dev Cart|Admin</title>
-            </Head>
             <h1 className="title"> Categories </h1>
 
             <label>{editedCategory
